@@ -17,7 +17,7 @@ node {
                 	sh "${tool("sonar")}/bin/sonar-scanner"
                 }
               }
-          }     	  
+       	  
 
     stage('Artifactory configuration') {
         // Tool name from Jenkins configuration
