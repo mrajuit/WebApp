@@ -14,7 +14,7 @@ node {
     stage ('Static Code Analysis') {
 	            def scannerHome = tool 'sonar';
                 withSonarQubeEnv("jenkins-sonar") {
-                	sh "${tool("sonar")}/bin/sonar-scanner"
+                	sh "${tool("sonar")}/home/ben/sonarqube-8.2.0.32929/bin/linux-x86-64"
                 }
               }
        	  
