@@ -11,6 +11,13 @@ node {
     stage('Clone sources') {
         git url: 'https://github.com/natewilcox/WebApp.git'
     }
+    stage ('Static Code Analysis') {
+	            def scannerHome = tool 'sonar';
+                withSonarQubeEnv("sonar") {
+                	sh "${tool("sonar")}/bin/sonar-scanner"
+                }
+              }
+          }     	  
 
     stage('Artifactory configuration') {
         // Tool name from Jenkins configuration
