@@ -13,7 +13,7 @@ node {
     }
     stage ('Static Code Analysis') {
 	            def scannerHome = tool 'sonar';
-                withSonarQubeEnv("sonar") {
+                withSonarQubeEnv("jenkins-sonar") {
                 	sh "${tool("sonar")}/bin/sonar-scanner"
                 }
               }
