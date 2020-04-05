@@ -9,7 +9,7 @@ node {
  rtMaven.tool = "maven"
 
     stage('Clone sources') {
-        git url: 'https://github.com/natewilcox/WebApp.git'
+        git url: 'https://github.com/mrajuit/WebApp.git'
     }
     stage ('Static Code Analysis') {
 	            def scannerHome = tool 'sonar';
